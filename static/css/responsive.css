@@ -1,0 +1,101 @@
+/* Responsive Design and the Brackepoints
+
+Good Practices: Add al least two media queries, one for tablet (medium screens) and one for phones (small screens).
+
+Following the Microsoft documentation.
+
+- Phone or Small screen
+
+    @media(max-width:640px) {
+
+        //Your style here
+
+    }
+
+- Tablet or Medium screen
+
+    @media((min-width:641px) and (max-width:1007px)){
+
+        //Your style here
+
+    }
+*/
+
+@media (max-width: 1007px) {
+  html {
+    font-size: 12px;
+  }
+
+  /*About*/
+  .about-section {
+    flex-direction: column;
+  }
+  .about-description-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /*Projects*/
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center 50%;
+  }
+
+  .project-card a {
+    width: 100%;
+    height: min-content;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 10px;
+  }
+  header {
+    flex-direction: column;
+    height: max-content;
+    padding: 2%;
+  }
+  .nav-btn {
+    display: inline-flex;
+  }
+  .nav-options {
+    flex-direction: column;
+  }
+  .nav-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--neutral-color);
+    margin: 6px auto;
+  }
+
+  /*Toggle*/
+  #chek-option:not(:checked) ~ .nav-options {
+    height: 0;
+    overflow: hidden;
+  }
+  #chek-option:checked ~ .nav-options {
+    height: auto;
+    overflow: auto;
+  }
+
+  /*About*/
+  .about-section {
+    flex-direction: column;
+  }
+  .about-image-container img,
+  .about-description-container p {
+    width: 100%;
+  }
+  .label-list {
+    width: 90%;
+  }
+}
