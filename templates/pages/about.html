@@ -1,9 +1,63 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}About Me{% endblock title %}
 
 {% block content %}
 <!--Here all rout About Me section-->
-<h1>Hello! This is about me</h1>
+<section class="about-section center-row">
+  <div class="about-image-container center-row">
+    <img src="{% static './img/me.png' %}" alt="logo">
+  </div>
+
+  <div class="about-description-container center-column">
+    <h1>Full Stack Developer </h1>
+    <h2>Fernanda Ugalde G.</h2>
+
+    <p>
+      As a dedicated student of Software Engineering and Emerging Technologies, I possess a fervent appetite for
+      learning and a steadfast commitment to excellence. My approach to tasks is characterized by a relentless pursuit
+      of optimal outcomes, achieved through efficiency and diligence. My inherent qualities of responsibility and
+      organization complement my ability to seamlessly adapt to diverse environments. <br><br>
+
+      With a repertoire that includes experience in web application development, data analysis, and proficiency in
+      various programming languages, I am currently immersed in two significant projects. One involves crafting a
+      chatbot for an organizational network, leveraging the Rasa framework, while the other entails the development of a
+      web application.<br><br>
+
+      Furthering my skills, I am currently pursuing the Full Stack Development Immersive certificate at San Diego Global
+      Knowledge University.<br><br>
+
+      My aspirations lie in the realm of international project development, where I seek to both contribute and expand
+      my knowledge base. As I explore opportunities, I am particularly drawn to roles within the software development
+      sphere, with a keen interest in artificial intelligence and backend web application development.
+    </p>
+
+    <div class="label-container center-column">
+      <h2>Skills</h2>
+      <div class="label-list center-row">
+        <label class="label-text">C</label>
+        <label class="label-text">Python</label>
+        <label class="label-text">Java</label>
+        <label class="label-text">Matlab</label>
+        <label class="label-text">Laravel/PHP</label>
+        <label class="label-text">Data analysis</label>
+        <label class="label-text">Ux/UI</label>
+        <label class="label-text">Rasa</label>
+        <label class="label-text">HTML</label>
+        <label class="label-text">CSS</label>
+        <label class="label-text">JavaScript</label>
+        <label class="label-text">Databases</label>
+        <label class="label-text">JQuery</label>
+        <label class="label-text">Django</label>
+        <label class="label-text">SCRUM</label>
+        <label class="label-text">React</label>
+        <label class="label-text">Flask</label>
+        <label class="label-text">GitHub</label>
+        <label class="label-text">FIGMA</label>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock content %}

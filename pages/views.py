@@ -4,9 +4,6 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 # Create your views here.
-def home(request):
-  return render(request, 'pages/home.html')
-
 
 def about(request):
   return render(request, 'pages/about.html')
@@ -33,7 +30,7 @@ def contact(request):
         html_message=html
       )
 
-      return redirect('home')
+      return redirect('')
   else:
     form = ContactForm()
     
