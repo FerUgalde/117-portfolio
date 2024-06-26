@@ -20,4 +20,4 @@ class Project(models.Model):
   technologies = models.ManyToManyField(Technology)
 
   def __str__(self):
-    return self.name
+    return f"{self.name} - ({self.year})"

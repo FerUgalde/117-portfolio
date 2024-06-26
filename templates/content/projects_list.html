@@ -5,6 +5,13 @@
 
 {% block content %}
 <section class="projects-section center-column">
+
+  {% if user.is_authenticated %}
+  <div class="add-project-container">
+    <a href="{% url 'project_new' %}" class="btn-primary">Add Project</a>
+  </div>
+  {% endif %}
+
   <h2>Projects</h2>
 
   <div class="projects-list">
@@ -12,7 +19,7 @@
     {% for project in projects %}
     <div class="project-card">
       <a href="{{ project.repository }}" target="_blank">
-        <img src="{{ project.image.url }}" alt="project1">
+        <img src="{{ project.image }}" alt="project1">
         <p>{{ project.name }}</p>
         <p>{{ project.description}}</p>
         <p>{{ project.year}}</p>

@@ -11,4 +11,5 @@ def projects_list(request):
 # loclaohost/content/new
 # loclaohost/content/edit_id
 
-
+def project_new(request):
+  return render(request, 'content/projects_new.html')
