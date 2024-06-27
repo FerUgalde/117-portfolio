@@ -3,30 +3,18 @@
 {% block title %}Contact{% endblock title %}
 
 {% block content %}
-<div class="contact">
+<div class="new-project-section center-column">
   <h1>Do you want to tell me something?</h1>
-  <h3>Please use the form below</h3>
+  <br>
+  <h2>Please use the form below</h2>
 
-  <form action="contact" method="post">
+  <form id="projectForm" action="contact" method="post">
     {% csrf_token %}
-    <div class="control">
-      <label>Your name:</label>
-      <br />
-      {{ form.name }}
-    </div>
-    <div class="control">
-      <label>Your email:</label>
-      <br />
-      {{ form.email }}
-    </div>
-    <div class="control">
-      <label>Your message:</label>
-      <br />
-      {{ form.message }}
-    </div>
+    {{ form.name }}
+    {{ form.email }}
+    {{ form.message }}
 
-    <br />
-    <button>Send message</button>
+    <button class="btn-primary">Send message</button>
   </form>
 </div>
 {% endblock %}
